@@ -3,18 +3,18 @@
 ```bash
 git clone git@github.com:Jubeki/statamic-multiple-assets-query-issue.git
 cd statamic-multiple-assets-query-issue
-composer install
 cp .env.example .env
+touch database/database.sqlite
+composer install
 php artisan migrate --seed
-php please eloquent:import-assets
-php please eloquent:import-blueprints
-php please eloquent:import-collections
+php please eloquent:import-assets --force
+php please eloquent:import-blueprints --force
+php please eloquent:import-collections --force
 php please eloquent:import-entries
-php please eloquent:import-forms
-php please eloquent:import-globals
-php please eloquent:import-navs
-php please eloquent:import-revisions
-php please eloquent:import-taxonomies
+php please eloquent:import-forms --force
+php please eloquent:import-globals --force
+php please eloquent:import-navs --force
+php please eloquent:import-taxonomies --force
 php please eloquent:import-sites
 php please eloquent:sync-assets
 ```
@@ -22,7 +22,7 @@ php please eloquent:sync-assets
 ## CP Credentials:
 
 ```plain
-admin@example.com
+test@example.com
 password
 ```
 
