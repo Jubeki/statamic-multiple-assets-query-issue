@@ -1,43 +1,35 @@
-<p align="center"><img src="https://statamic.com/assets/branding/Statamic-Logo+Wordmark-Rad.svg" width="400" alt="Statamic Logo" /></p>
+## Setup Instructions:
 
-## About Statamic
+```bash
+git clone git@github.com:Jubeki/statamic-multiple-assets-query-issue.git
+cd statamic-multiple-assets-query-issue
+composer install
+cp .env.example .env
+php artisan migrate --seed
+php please eloquent:import-assets
+php please eloquent:import-blueprints
+php please eloquent:import-collections
+php please eloquent:import-entries
+php please eloquent:import-forms
+php please eloquent:import-globals
+php please eloquent:import-navs
+php please eloquent:import-revisions
+php please eloquent:import-taxonomies
+php please eloquent:import-sites
+php please eloquent:sync-assets
+```
 
-Statamic is the flat-first, Laravel + Git powered CMS designed for building beautiful, easy to manage websites.
+## CP Credentials:
 
-> [!NOTE]
-> This repository contains the code for a fresh Statamic project that is installed via the Statamic CLI tool.
->
-> The code for the Statamic Composer package itself can be found at the [Statamic core package repository][cms-repo].
+```plain
+admin@example.com
+password
+```
 
+## Demo Images used for bug report
 
-## Learning Statamic
+https://fastly.picsum.photos/id/352/200/300.jpg?hmac=JRE6d4eB1tvPUpBESG8XEM2_22EaXNe2luRrVkydr2E
 
-Statamic has extensive [documentation][docs]. We dedicate a significant amount of time and energy every day to improving them, so if something is unclear, feel free to open issues for anything you find confusing or incomplete. We are happy to consider anything you feel will make the docs and CMS better.
+https://fastly.picsum.photos/id/990/200/300.jpg?hmac=6QkvunJPzSUAgkuY7p_hlJq5SmEdhlV01fbh5cMzKgg
 
-## Support
-
-We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available on the [forum](https://statamic.com/forum) and in [Discord][discord].
-
-
-## Contributing
-
-Thank you for considering contributing to Statamic! We simply ask that you review the [contribution guide][contribution] before you open issues or send pull requests.
-
-
-## Code of Conduct
-
-In order to ensure that the Statamic community is welcoming to all and generally a rad place to belong, please review and abide by the [Code of Conduct](https://github.com/statamic/cms/wiki/Code-of-Conduct).
-
-
-## Important Links
-
-- [Statamic Main Site](https://statamic.com)
-- [Statamic Documentation][docs]
-- [Statamic Core Package Repo][cms-repo]
-- [Statamic Migrator](https://github.com/statamic/migrator)
-- [Statamic Discord][discord]
-
-[docs]: https://statamic.dev/
-[discord]: https://statamic.com/discord
-[contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[cms-repo]: https://github.com/statamic/cms
+https://fastly.picsum.photos/id/666/200/300.jpg?hmac=FfmCCw-UuMgMhTLigoNVx2auMxtw-EtixqVwwxaefq0
